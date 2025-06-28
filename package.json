@@ -1,0 +1,29 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:docs/css --watch",
+    "pug": "pug src/pug --pretty --watch --out docs",
+    "dev": "concurrently \"npm run scss\" \"npm run pug\" \"live-server docs\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanifmaleki/Tip-Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hanifmaleki/Tip-Calculator/issues"
+  },
+  "homepage": "https://github.com/hanifmaleki/Tip-Calculator#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "live-server": "^1.2.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.89.2"
+  }
+}
