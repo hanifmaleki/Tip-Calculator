@@ -1,8 +1,11 @@
-div(class="input-container")
-    form 
-        div(class="input-bill-container")
+form 
+    div(class="input-container")
+        div(class="input-input-container")
             label Bill
-            input(type="number", value="0")
+            div(class="input-with-unit")
+                span(class="unit")
+                    include svg/icon-dollar.pug
+                input(type="number", value="0")
 
         div(class="input-select-tip-container")
             div(class="input-selcet-tip-title") Select tip %
@@ -14,6 +17,9 @@ div(class="input-container")
                 div(class="input-select-tip-button") 50%
                 div(class="input-select-tip-button") Custom
 
-        div(class="input-people-number-container")
+        div(class="input-input-container")
             label Number of people
-            input(type="number", value="0")
+            div(class="input-with-unit")
+                span(class="unit") 
+                    include svg/icon-person.pug
+                input(type="number", value="0")

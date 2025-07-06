@@ -1,0 +1,75 @@
+@use 'variables';
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-size: 1em;
+}
+
+.input-input-container {
+    display: flex;
+    flex-direction: column;
+    color: variables.$grey-400;
+
+    label {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: variables.$grey-500;
+    }
+}
+
+.input-with-unit {
+    position: relative;
+    display: flex;
+    padding: 0.3em;
+    background-color: variables.$grey-50;
+
+    input {
+        flex-grow: 1;
+        border: none;
+        color: variables.$green-900;
+        background-color: variables.$grey-50;
+        direction: rtl;
+        font-weight: 700;
+        padding-right: 0.7em;
+        font-size: 1em;
+    }
+
+    .unit {
+        padding-left: 0.7em;
+        color: variables.$grey-400;
+    }
+}
+
+.input-select-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-select-tip-title {
+    font-size: 1em;
+    font-weight: 600;
+    color: variables.$grey-500;
+}
+
+.input-select-tip-button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    font-weight: 500;
+
+    @media (min-width: variables.$mobile-width) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.input-select-tip-button {
+    background-color: variables.$green-900;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    text-align: center;
+    color: variables.$white;
+}
+
+

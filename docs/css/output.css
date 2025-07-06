@@ -1,0 +1,71 @@
+.output-tip-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 0.8em;
+  padding: 1em;
+  height: 100%;
+}
+
+.output-tip-elements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  gap: 1em;
+}
+
+.output-tip-element-container {
+  display: flex;
+  width: 100%;
+}
+
+.output-tip-element-text-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: hsl(0, 100%, 100%);
+}
+
+.output-tip-element-title-text {
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+.output-tip-element-per-person-text {
+  font-size: 0.5em;
+  line-height: 1em;
+  color: hsl(185, 41%, 84%);
+}
+
+.output-tip-element-amount-container {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: hsl(172, 67%, 45%);
+}
+.output-tip-element-amount-container svg {
+  width: 0.45em;
+  height: auto;
+  margin-right: 0.2em;
+  stroke: hsl(172, 67%, 45%);
+}
+
+.output-div-button-container {
+  width: 100%;
+}
+.output-div-button-container button {
+  all: unset;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+/*# sourceMappingURL=output.css.map */

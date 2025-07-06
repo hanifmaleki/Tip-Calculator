@@ -1,0 +1,26 @@
+@use 'variables';
+@use 'input';
+@use 'output';
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+    margin: auto;
+    width: 100%;
+    max-width: 30em;
+    font-size: 0.9em;
+    background-color: variables.$white;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+
+    @media (min-width: variables.$ipad-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 40em;
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+    }
+}
+

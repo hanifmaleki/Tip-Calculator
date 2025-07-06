@@ -1,0 +1,76 @@
+@use 'variables';
+
+.output-tip-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: variables.$green-900;
+    border-radius: 0.8em;
+    padding: 1em;
+    height: 100%;
+}
+
+.output-tip-elements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    gap: 1em;
+}
+
+.output-tip-element-container {
+    display: flex;
+    width: 100%;
+}
+
+.output-tip-element-text-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: variables.$white;
+}
+
+.output-tip-element-title-text {
+    font-size: 0.8em;
+    line-height: 1.3em;
+}
+
+.output-tip-element-per-person-text {
+    font-size: 0.5em;
+    line-height: 1em;
+    color: variables.$grey-200;
+}
+
+.output-tip-element-amount-container {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: variables.$green-400;
+
+    svg {
+        width: 0.45em;
+        height: auto;
+        margin-right: 0.2em;
+        stroke: variables.$green-400;
+    }
+}
+
+.output-div-button-container {
+    width: 100%;
+
+    button {
+        all: unset;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.5em;
+        border-radius: 0.3em;
+        cursor: pointer;
+        font-weight: 600;
+        text-align: center;
+        color: variables.$green-900;
+        background-color: variables.$green-400;
+    }
+}
+    
+
+

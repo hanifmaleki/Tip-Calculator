@@ -1,7 +1,18 @@
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+@use 'variables';
+@use 'footer';
+@use 'header';
+@use 'main';
+
+
+* {
+    box-sizing: border-box;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+body {
+    margin: 0;
+    font-family: variables.$space-mono;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    background-color: variables.$grey-200;
 }

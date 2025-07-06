@@ -1,0 +1,16 @@
+.header-container {
+  margin: 30px auto;
+  padding: 0.7em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.4em;
+  line-height: 1.5em;
+  color: hsl(183, 100%, 15%);
+}
+@media (min-width: 400px) {
+  .header-container {
+    margin: 60px auto;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
