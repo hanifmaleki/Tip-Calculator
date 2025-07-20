@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "sass src/scss:docs/css --watch",
     "pug": "pug src/pug --pretty --watch --out docs",
-    "dev": "concurrently \"npm run scss\" \"npm run pug\" \"live-server docs\""
+    "watch-js": "watch 'copy-files-from-to --when-file-exists overwrite' src/js",
+    "dev": "concurrently \"npm run scss\" \"npm run pug\"  \"npm run watch-js\" \"live-server docs\""
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,16 @@
   "homepage": "https://github.com/hanifmaleki/Tip-Calculator#readme",
   "devDependencies": {
     "concurrently": "^9.2.0",
+    "copy-files-from-to": "^3.12.1",
     "live-server": "^1.2.0",
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.89.2"
-  }
+    "sass": "^1.89.2",
+    "watch": "^1.0.2"
+  },
+  "copyFiles": [
+    {
+      "from": "src/js",
+      "to": "docs"
+    }
+  ]
 }

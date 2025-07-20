@@ -15,12 +15,34 @@
   font-weight: 600;
   color: hsl(186, 14%, 43%);
 }
+.input-input-container.focused .input-with-unit {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+.input-input-container.error .input-with-unit {
+  border: 2px solid hsl(9, 77%, 56%);
+}
+.input-input-container.error .input-input-error-container {
+  display: block;
+}
+
+.input-input-label-error-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-input-error-container {
+  display: none;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: hsl(9, 77%, 56%);
+}
 
 .input-with-unit {
   position: relative;
   display: flex;
   padding: 0.3em;
   background-color: hsl(189, 47%, 97%);
+  border-radius: 0.25em;
 }
 .input-with-unit input {
   flex-grow: 1;
@@ -31,6 +53,10 @@
   font-weight: 700;
   padding-right: 0.7em;
   font-size: 1em;
+}
+.input-with-unit input:focus {
+  border: none;
+  outline: none;
 }
 .input-with-unit .unit {
   padding-left: 0.7em;
@@ -53,6 +79,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
   font-weight: 500;
+  cursor: pointer;
 }
 @media (min-width: 400px) {
   .input-select-tip-button-container {
@@ -66,6 +93,9 @@
   border-radius: 0.3em;
   text-align: center;
   color: hsl(0, 100%, 100%);
+}
+.input-select-tip-button.selected {
+  background-color: hsl(172, 67%, 45%);
 }
 
 /*# sourceMappingURL=input.css.map */

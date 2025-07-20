@@ -11,19 +11,19 @@ div(class="output-container")
                             | / person
                     div(class="output-tip-element-amount-container")
                         include svg/icon-dollar.pug
-                        | 0.00
+                        span(id="tip-per-person-output") 0.00
 
             div(class="output-tip-element-container")
                 div(class="output-tip-element-container")
                     div(class="output-tip-element-text-container")
                         div(class="output-tip-element-title-text")
-                            | Tip Amount
+                            | Total
                 
                         div(class="output-tip-element-per-person-text")
                             | / person
                     div(class="output-tip-element-amount-container")
                         include svg/icon-dollar.pug
-                        | 0.00
+                        span(id="total-tip-output") 0.00
 
         div(class="output-div-button-container")
-            button RESET
+            button(id="reset-button") RESET

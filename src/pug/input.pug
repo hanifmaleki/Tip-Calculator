@@ -1,25 +1,32 @@
+mixin inputSelectTipButton(id, value)
+    .input-select-tip-button(id=id)= value + '%'
+
+mixin inputNumber(id, label, inputId, errorText) 
+    .input-input-container(id=id)
+        .input-input-label-error-container
+            label(for=id + '-input')= label
+            .input-input-error-container
+        .input-with-unit
+            span.unit
+                block
+            input(id=id + '-input' type="number", value="0")
+
 form 
     div(class="input-container")
-        div(class="input-input-container")
-            label Bill
-            div(class="input-with-unit")
-                span(class="unit")
-                    include svg/icon-dollar.pug
-                input(type="number", value="0")
+        +inputNumber('bill-input', 'Bill', null)
+            include svg/icon-dollar.pug
 
         div(class="input-select-tip-container")
             div(class="input-selcet-tip-title") Select tip %
             div(class="input-select-tip-button-container")
-                div(class="input-select-tip-button") 5%
-                div(class="input-select-tip-button") 10%
-                div(class="input-select-tip-button") 15%
-                div(class="input-select-tip-button") 25%
-                div(class="input-select-tip-button") 50%
-                div(class="input-select-tip-button") Custom
+                +inputSelectTipButton('tip-5', '5')
+                +inputSelectTipButton('tip-10', '10')
+                +inputSelectTipButton('tip-15', '15')
+                +inputSelectTipButton('tip-25', '25')
+                +inputSelectTipButton('tip-50', '50')
+                +inputSelectTipButton('tip-custom', 'Custom')
 
-        div(class="input-input-container")
-            label Number of people
-            div(class="input-with-unit")
-                span(class="unit") 
-                    include svg/icon-person.pug
-                input(type="number", value="0")
+        +inputNumber('person-input', 'Number of people')
+            include svg/icon-person.pug
+        
+ 

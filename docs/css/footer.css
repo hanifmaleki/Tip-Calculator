@@ -1,7 +1,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
-  backgrund-color: hsl(0, 100%, 100%);
+  background-color: hsl(0, 100%, 100%);
 }
 @media (min-width: 768px) {
   .attribution {

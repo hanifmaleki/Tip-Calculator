@@ -17,6 +17,34 @@
         font-weight: 600;
         color: variables.$grey-500;
     }
+
+    &.focused {
+        .input-with-unit {
+            border: 2px solid variables.$green-400;
+        }
+    }
+
+    &.error {
+        .input-with-unit {
+            border: 2px solid variables.$orange;
+        }
+
+        .input-input-error-container {
+            display: block;
+        }
+    }
+}
+
+.input-input-label-error-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-input-error-container {
+    display: none;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: variables.$orange;  
 }
 
 .input-with-unit {
@@ -24,6 +52,7 @@
     display: flex;
     padding: 0.3em;
     background-color: variables.$grey-50;
+    border-radius: 0.25em;
 
     input {
         flex-grow: 1;
@@ -34,6 +63,11 @@
         font-weight: 700;
         padding-right: 0.7em;
         font-size: 1em;
+
+        &:focus {
+            border:none;
+            outline: none;
+        }
     }
 
     .unit {
@@ -58,6 +92,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.6rem;
     font-weight: 500;
+    cursor: pointer; 
 
     @media (min-width: variables.$mobile-width) {
         grid-template-columns: repeat(3, 1fr);
@@ -70,6 +105,10 @@
     border-radius: 0.3em;
     text-align: center;
     color: variables.$white;
+
+    &.selected {
+        background-color: variables.$green-400;
+    }
 }
 
 
