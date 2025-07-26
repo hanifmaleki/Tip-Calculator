@@ -11,6 +11,11 @@ mixin inputNumber(id, label, inputId, errorText)
                 block
             input(id=id + '-input' type="number", value="0")
 
+mixin inputCustom(id)
+    .input-select-tip-custom-container(id=id) 
+        span.text Custom
+        input(type="number", value="0")
+
 form 
     div(class="input-container")
         +inputNumber('bill-input', 'Bill', null)
@@ -24,7 +29,7 @@ form
                 +inputSelectTipButton('tip-15', '15')
                 +inputSelectTipButton('tip-25', '25')
                 +inputSelectTipButton('tip-50', '50')
-                +inputSelectTipButton('tip-custom', 'Custom')
+                +inputCustom('custom-input')
 
         +inputNumber('person-input', 'Number of people')
             include svg/icon-person.pug

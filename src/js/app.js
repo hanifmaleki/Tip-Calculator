@@ -2,7 +2,7 @@
 let billInput
 let personInput
 let inputTipsButtonsWithFixedPercent
-let inputPersonNumberContainer
+let inputCustom
 
 // output
 let tipPerPersonOutput
@@ -14,10 +14,10 @@ let selectedTipButtonWithFixedPercent = null
 window.onload = () => {
     billInput = new InputNumber(document.querySelector('#bill-input'), onChangedBillInputData)
     personInput = new InputNumber(document.querySelector('#person-input'), onChangedBillInputData)
-    inputTip5 = document.querySelector('#tip-5')
-    inputPersonNumberContainer = document.querySelector('#input-person-number-container')
+    inputCustom = new InputCustom(document.querySelector('#custom-input'), onChangedBillInputData) 
     tipPerPersonOutput = document.querySelector('#total-tip-output')
     totalTipOutput = document.querySelector('#tip-per-person-output')
+
 
     inputTipsButtonsWithFixedPercent = [
         {
@@ -55,20 +55,26 @@ function onChangedBillInputData() {
 
         return
     } else {
-        inputPersonNumberContainer.classList.remove('error')
+        personInput.clearError()
     }
 
-    if (!selectedTipButtonWithFixedPercent) {
-        console.log('no percent')
+    if (!selectedTipButtonWithFixedPercent && inputCustom.value === 0) {
         return
     }
 
-    const tipPercentValue = selectedTipButtonWithFixedPercent.value
+    let tipPercentValue
+
+    if (selectedTipButtonWithFixedPercent) {
+        tipPercentValue = selectedTipButtonWithFixedPercent.value
+    } else {
+        tipPercentValue = inputCustom.value
+    }
+
     const tipTotal = billInput.value * tipPercentValue / 100
     const tipPerPerson = tipTotal / Number(personInput.value)
 
-    tipPerPersonOutput.textContent = tipPerPerson
-    totalTipOutput.textContent = tipTotal
+    tipPerPersonOutput.textContent = Math.round(tipPerPerson * 100) / 100
+    totalTipOutput.textContent = Math.round(tipTotal * 100) / 100
 }
 
 function onTipsButtonWithPercentSelected(tipButtonWithPercent) {
@@ -129,3 +135,43 @@ class InputNumber {
     }
 }
 
+class InputCustom {
+    static SPAN_TEXT = 'Custom'
+
+    constructor(element, changeListener) {
+        this.element = element
+        this.input = element.getElementsByTagName('input')[0]
+        this.span = element.getElementsByTagName('span')[0]
+        this.changeListener = changeListener
+
+        this.element.addEventListener('click', (event) =>this.onClick(event)) 
+        this.input.addEventListener('blur', (event) => this.onBlurInput(event))
+        this.span.textContent = InputCustom.SPAN_TEXT
+    }
+
+    onClick() {
+        this.element.classList.add('selected')
+        this.input.focus()
+    }
+
+    onBlurInput() {
+        this.element.classList.remove('selected')
+
+        if (this.input.value === 0) {
+            this.span.textContent = InputCustom.SPAN_TEXT
+        } else {
+            this.span.textContent = this.input.value
+        }
+
+        this.changeListener()
+    }
+
+    reset() {
+        this.input.value = 0
+        this.onBlurInput()
+    }
+
+    get value() {
+        return this.input.value
+    }
+}
