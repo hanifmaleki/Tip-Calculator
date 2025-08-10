@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5em;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .input-input-container {
@@ -13,7 +13,7 @@
     color: variables.$grey-400;
 
     label {
-        font-size: 0.8em;
+        font-size: 0.9em;
         font-weight: 600;
         color: variables.$grey-500;
     }
@@ -42,7 +42,7 @@
 
 .input-input-error-container {
     display: none;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 600;
     color: variables.$orange;  
 }
@@ -62,7 +62,7 @@
         direction: rtl;
         font-weight: 700;
         padding-right: 0.7em;
-        font-size: 1em;
+        font-size: 1.1em;
 
         &:focus {
             border:none;
@@ -82,7 +82,7 @@
 }
 
 .input-select-tip-title {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 600;
     color: variables.$grey-500;
 }
@@ -135,7 +135,7 @@
         direction: rtl;
         font-weight: 700;
         padding-right: 0.7em;
-        font-size: 1em;
+        font-size: 1.1em;
 
         &:focus {
             border:none;

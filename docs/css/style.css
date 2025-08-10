@@ -25,7 +25,7 @@
 }
 @media (min-width: 400px) {
   .header-container {
-    margin: 60px auto;
+    margin: 120px auto;
   }
 }
 
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .input-input-container {
@@ -42,7 +42,7 @@
   color: hsl(184, 14%, 56%);
 }
 .input-input-container label {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 600;
   color: hsl(186, 14%, 43%);
 }
@@ -63,7 +63,7 @@
 
 .input-input-error-container {
   display: none;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 600;
   color: hsl(9, 77%, 56%);
 }
@@ -83,7 +83,7 @@
   direction: rtl;
   font-weight: 700;
   padding-right: 0.7em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .input-with-unit input:focus {
   border: none;
@@ -100,7 +100,7 @@
 }
 
 .input-select-tip-title {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
   color: hsl(186, 14%, 43%);
 }
@@ -151,7 +151,7 @@
   direction: rtl;
   font-weight: 700;
   padding-right: 0.7em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .input-select-tip-custom-container input:focus {
   border: none;
@@ -255,7 +255,7 @@
   margin: auto;
   width: 100%;
   max-width: 30em;
-  font-size: 0.9em;
+  font-size: 1em;
   background-color: hsl(0, 100%, 100%);
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
