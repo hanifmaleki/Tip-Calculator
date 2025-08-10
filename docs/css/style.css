@@ -157,14 +157,17 @@
   border: none;
   outline: none;
 }
-.input-select-tip-custom-container.selected {
+.input-select-tip-custom-container.focused {
   background-color: hsl(172, 67%, 45%);
 }
-.input-select-tip-custom-container.selected span {
+.input-select-tip-custom-container.focused span {
   display: none;
 }
-.input-select-tip-custom-container.selected input {
+.input-select-tip-custom-container.focused input {
   display: block;
+}
+.input-select-tip-custom-container.selected {
+  border: 0.2em solid hsl(172, 67%, 45%);
 }
 
 .output-tip-container {
@@ -235,6 +238,13 @@
   text-align: center;
   color: hsl(183, 100%, 15%);
   background-color: hsl(172, 67%, 45%);
+}
+.output-div-button-container.hover button {
+  background-color: hsl(172, 67%, 45%);
+}
+.output-div-button-container.disabled button {
+  cursor: default;
+  background-color: hsl(186, 14%, 43%);
 }
 
 .main-container {

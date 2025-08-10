@@ -70,6 +70,19 @@
         color: variables.$green-900;
         background-color: variables.$green-400;
     }
+
+    &.hover {
+        button {
+            background-color: variables.$green-400;
+        }
+    }
+
+    &.disabled {
+        button {
+            cursor: default;
+            background-color: variables.$grey-500;
+        }
+    }
 }
     
 

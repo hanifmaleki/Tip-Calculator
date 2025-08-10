@@ -1,3 +1,7 @@
+mixin resetButton(id) 
+    .output-div-button-container(id=id)
+        button RESET
+
 div(class="output-container")
     div(class="output-tip-container")
         div(class="output-tip-elements-container")
@@ -25,5 +29,4 @@ div(class="output-container")
                         include svg/icon-dollar.pug
                         span(id="total-tip-output") 0.00
 
-        div(class="output-div-button-container")
-            button(id="reset-button") RESET
+        +resetButton("reset-button")
